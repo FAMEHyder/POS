@@ -8,7 +8,6 @@ async function Comment({params}) {
   return (
     <div>
         <h1> Comment number {CommentID} on {BlogID} is  </h1>
-      
     </div>
   )
 }
