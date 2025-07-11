@@ -4,8 +4,9 @@ export const metadata = {
   title :{
     template : '%s | Blog page',
     default : 'Blog Page'
-  }
+  },
   
+  description : " Hello world"
 }   
 
 export default function RootLayout({ children }) {
