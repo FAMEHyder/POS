@@ -6,7 +6,7 @@ export const metadata = {
     default : 'Blog Page'
   }
   
-} 
+}   
 
 export default function RootLayout({ children }) {
   
