@@ -46,15 +46,15 @@ return Response.json(todos)
 
 
 export async function POST(request){
-    const todo = await request.json()
-    const newtodo = {
-        id : todos.lenght +1,
+    const todo = await request.json();
+    const newTodo = {
+        id : todos.lenght = 1,
         name: todos.name,
         age : todos.age
-    }
+    };
 
-    todos.push(newtodo) 
-return Response.json(newtodo)
+    todos.push(newTodo);
+return Response.json(newTodo);
 
 
 // return new Response (JSON.stringify({data},{
