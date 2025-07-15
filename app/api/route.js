@@ -52,7 +52,8 @@ export async function POST(request){
         name: todos.name,
         age : todos.age
     }
-    todos.push() 
+
+    todos.push(newtodo) 
 return Response.json(newtodo)
 
 
