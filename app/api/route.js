@@ -28,16 +28,39 @@
 //     {'age' : '24'},
 //     {'proffision' : 'student'}
 // ]
-import data from '../../todos.json'
+import todos from '../../todos.json'
 
-export function GET (){
+export function GET(request){
+    console.log( "your req is : ",request)
+return Response.json(todos)
 
-return new Response (JSON.stringify({data},{
-    header : {
-        'Contant-Type': 'application/json'
-    } 
-})
-)
+
+// return new Response (JSON.stringify({data},{
+//     header : {
+//         'Contant-Type': 'application/json'
+//     } 
+// })
+// )
 
 }
 
+
+export async function POST(request){
+    const todo = await request.json()
+    const newtodo = {
+        id : todos.lenght +1,
+        name: todos.name,
+        age : todos.age
+    }
+    todos.push() 
+return Response.json(newtodo)
+
+
+// return new Response (JSON.stringify({data},{
+//     header : {
+//         'Contant-Type': 'application/json'
+//     } 
+// })
+// )
+
+}
