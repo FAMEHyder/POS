@@ -24,7 +24,6 @@ import {
   Reviews,
   Assessment
 } from '@mui/icons-material';
-import profile from '../../public/CompanyLogo.png';
 
 const sidebarItems = [
   { label: 'Dashboard', icon: <Dashboard /> },
@@ -53,14 +52,11 @@ function Header() {
           <Box display="flex" alignItems="center" gap={2}>
             <Box
               component={'img'}
-              src={profile}
+              src='/CompanyLogo.png'
               alt='Logo'
               height={'50px'}
-              width={'50px'}
-              sx={{
-                border: '3px solid white',
-                borderRadius: '50%',
-              }}
+              width={'100px'}
+             
             />
           </Box>
 
