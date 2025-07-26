@@ -47,7 +47,7 @@ function Header() {
     <>
       {/* Top Navbar */}
       <AppBar position="fixed">
-        <Toolbar sx={{ bgcolor: 'green', height: '10vh', justifyContent: 'space-between' }}>
+        <Toolbar sx={{ bgcolor: '#045956ff', height: '10vh', justifyContent: 'space-between' }}>
           {/* Left: Logo */}
           <Box display="flex" alignItems="center" gap={2}>
             <Box
