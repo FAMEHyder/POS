@@ -75,7 +75,7 @@ function Header() {
       {/* Sidebar */}
       <Box
         sx={{
-          width: 250,
+          width: 150,
           bgcolor: '#f5f5f5',
           borderRight: '1px solid #ccc',
           height: '180vh',
