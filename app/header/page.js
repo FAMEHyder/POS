@@ -65,7 +65,6 @@ function Header() {
             {topNavItems.map((text) => (
               <Button key={text} color="inherit">{text}</Button>
             ))}
-            <Button color="inherit">Sign In</Button>
           </Box>
         </Toolbar>
       </AppBar>
