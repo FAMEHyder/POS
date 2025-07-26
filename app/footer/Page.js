@@ -1,7 +1,7 @@
-function footer (){
+function footer() {
 
 
-    return(
-<></>
+    return (
+        <></>
     )
 }
