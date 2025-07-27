@@ -19,7 +19,12 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <Box>
-          <Box></Box>
+          {/* To adjust the side bar  */}
+          <Box>
+            <Sidebar />
+            {/* The main component */}
+          </Box>
+
           <Box>{children}</Box>
 
         </Box>
