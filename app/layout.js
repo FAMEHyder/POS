@@ -1,7 +1,7 @@
 import Header from "./header/page.js";
 import Footer from "./footer/Page.js";
 import Sidebar from "./Sidebar.js/page.js";
-
+import { Box } from '@mui/material';
 
 export const metadata = {
   title: {

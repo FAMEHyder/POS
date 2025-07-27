@@ -68,39 +68,7 @@ function Header() {
           </Box>
         </Toolbar>
       </AppBar>
-
-      {/* Spacer to avoid overlap */}
-      <Toolbar />
-
-      {/* Sidebar */}
-      <Box
-        sx={{
-          width: 150,
-          bgcolor: '#f5f5f5',
-          borderRight: '1px solid #ccc',
-          height: '180vh',
-          pt: 2,
-        }}
-      >
-        <List>
-          {sidebarItems.map((item) => (
-            <ListItem
-              button
-              key={item.label}
-              sx={{
-                flexDirection: 'column',
-                textAlign: 'center',
-                py: 2,
-              }}
-            >
-              <ListItemIcon sx={{ justifyContent: 'center', mb: 0.5 }}>
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: 12 }} />
-            </ListItem>
-          ))}
-        </List>
-      </Box>
+   
     </>
   );
 }
