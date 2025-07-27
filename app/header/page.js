@@ -11,34 +11,8 @@ import {
   ListItemIcon,
   ListItemText
 } from "@mui/material";
-import {
-  Dashboard,
-  Inventory,
-  Settings,
-  SyncAlt,
-  Money,
-  Description,
-  ShoppingCart,
-  PointOfSale,
-  AssignmentReturn,
-  Reviews,
-  Assessment
-} from '@mui/icons-material';
 
-const sidebarItems = [
-  { label: 'Dashboard', icon: <Dashboard /> },
-  { label: 'Product', icon: <Inventory /> },
-  { label: 'Adjustments', icon: <Settings /> },
-  { label: 'Transfer', icon: <SyncAlt /> },
-  { label: 'Expenses', icon: <Money /> },
-  { label: 'Quotations', icon: <Description /> },
-  { label: 'Purchase', icon: <ShoppingCart /> },
-  { label: 'Sales', icon: <PointOfSale /> },
-  { label: 'Sales Returns', icon: <AssignmentReturn /> },
-  { label: 'Purchase Returns', icon: <AssignmentReturn /> },
-  { label: 'Reviews', icon: <Reviews /> },
-  { label: 'Reports', icon: <Assessment /> },
-];
+
 
 function Header() {
   const topNavItems = ['Home', 'POS', 'Notification', 'Contact Us'];

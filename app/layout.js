@@ -1,7 +1,7 @@
 import Header from "./header/page.js";
 import Footer from "./footer/Page.js";
 import Sidebar from "./Sidebar.js/page.js";
-import { Box } from '@mui/material';
+import { Box ,Toolbar } from '@mui/material';
 
 export const metadata = {
   title: {
@@ -18,13 +18,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header />
-        <Box>
+
+        <Box display={'flex'}>
+
           {/* To adjust the side bar  */}
           <Box>
             <Sidebar />
-            {/* The main component */}
           </Box>
 
+
+          {/* The main component */}
           <Box>{children}</Box>
 
         </Box>
