@@ -42,7 +42,9 @@ function Header() {
           </Box>
         </Toolbar>
       </AppBar>
-   
+      
+      {/* This is to add extra spacer */}
+   <Toolbar />
     </>
   );
 }
