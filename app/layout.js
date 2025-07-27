@@ -1,5 +1,7 @@
 import Header from "./header/page.js";
 import Footer from "./footer/Page.js";
+import Sidebar from "./Sidebar.js/page.js";
+
 
 export const metadata = {
   title: {
@@ -16,7 +18,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <Box>
+          <Box></Box>
+          <Box>{children}</Box>
+
+        </Box>
+
         <Footer />
       </body>
     </html>
