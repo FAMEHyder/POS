@@ -24,18 +24,18 @@ import {
 import Link from 'next/link';
 
 const sidebarItems = [
-  { label: 'Dashboard', icon: <Dashboard /> ,},
-  { label: 'Product', icon: <Inventory /> },
-  { label: 'Adjustments', icon: <Settings /> },
-  { label: 'Transfer', icon: <SyncAlt /> },
-  { label: 'Expenses', icon: <Money /> },
-  { label: 'Quotations', icon: <Description /> },
-  { label: 'Purchase', icon: <ShoppingCart /> },
-  { label: 'Sales', icon: <PointOfSale /> },
-  { label: 'Sales Returns', icon: <AssignmentReturn /> },
-  { label: 'Purchase Returns', icon: <AssignmentReturn /> },
-  { label: 'Reviews', icon: <Reviews /> },
-  { label: 'Reports', icon: <Assessment /> },
+  { label: 'Dashboard', icon: <Dashboard />, path: '/dashboard' },
+  { label: 'Product', icon: <Inventory />, path: '/product' },
+  { label: 'Adjustments', icon: <Settings />, path: '/adjustments' },
+  { label: 'Transfer', icon: <SyncAlt />, path: '/transfer' },
+  { label: 'Expenses', icon: <Money />, path: '/expenses' },
+  { label: 'Quotations', icon: <Description />, path: '/quotations' },
+  { label: 'Purchase', icon: <ShoppingCart />, path: '/purchase' },
+  { label: 'Sales', icon: <PointOfSale />, path: '/sales' },
+  { label: 'Sales Returns', icon: <AssignmentReturn />, path: '/sales-returns' },
+  { label: 'Purchase Returns', icon: <AssignmentReturn />, path: '/purchase-returns' },
+  { label: 'Reviews', icon: <Reviews />, path: '/reviews' },
+  { label: 'Reports', icon: <Assessment />, path: '/reports' },
 ];
 
 const Sidebar = () => {
@@ -51,20 +51,22 @@ const Sidebar = () => {
     >
       <List>
         {sidebarItems.map((item) => (
-          <ListItem
-            button
-            key={item.label}
-            sx={{
-              flexDirection: 'column',
-              textAlign: 'center',
-              py: 2,
-            }}
-          >
-            <ListItemIcon sx={{ justifyContent: 'center', mb: 0.5 }}>
-              {item.icon}
-            </ListItemIcon>
-            <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: 12 }} />
-          </ListItem>
+          <Link key={item.label} href={item.path} passHref style={{ textDecoration: 'none', color: 'inherit' }}>
+            <ListItem
+              button
+              sx={{
+                flexDirection: 'column',
+                textAlign: 'center',
+                py: 2,
+                cursor: 'pointer'
+              }}
+            >
+              <ListItemIcon sx={{ justifyContent: 'center', mb: 0.5 }}>
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: 12 }} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
