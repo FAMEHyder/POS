@@ -21,9 +21,10 @@ import {
   Reviews,
   Assessment
 } from '@mui/icons-material';
+import Link from 'next/link';
 
 const sidebarItems = [
-  { label: 'Dashboard', icon: <Dashboard /> },
+  { label: 'Dashboard', icon: <Dashboard /> ,},
   { label: 'Product', icon: <Inventory /> },
   { label: 'Adjustments', icon: <Settings /> },
   { label: 'Transfer', icon: <SyncAlt /> },
