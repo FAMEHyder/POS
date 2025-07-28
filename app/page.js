@@ -10,24 +10,24 @@ export default function Home() {
 }
 
 
-import { readFile } from "fs/promises";
+// import { readFile } from "fs/promises";
 
-const read = await readFile("hello.txt", "utf-8")
+// const read = await readFile("hello.txt", "utf-8")
 
-console.log("Reading the file from home",read)
+// console.log("Reading the file from home",read)
 
-import http from "http";
+// import http from "http";
 
-const server = http.createServer((req,res)=>{
+// const server = http.createServer((req,res)=>{
 
-  console.log(req.url)
-  res.end("http server has been created successfully")
+//   console.log(req.url)
+//   res.end("http server has been created successfully")
 
-})
+// })
 
-server.listen(5000,()=>{
+// server.listen(5000,()=>{
 
-  console.log("Server is listening")
+//   console.log("Server is listening")
 
-})
+// })
 
