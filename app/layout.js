@@ -1,6 +1,6 @@
-import Header from "./header/page.js";
-import Footer from "./footer/Page.js";
-import Sidebar from "./Sidebar.js/page.js";
+import Header from "./header/page.jsx";
+import Footer from "./footer/Page.jsx";
+import Sidebar from "./Sidebar.js/page.jsx";
 import { Box ,Toolbar } from '@mui/material';
 
 export const metadata = {
