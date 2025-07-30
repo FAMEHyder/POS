@@ -4,7 +4,7 @@ import React from 'react';
 import {
   Box,
   List,
-  ListItem,
+  ListItemButton,
   ListItemIcon,
   ListItemText
 } from "@mui/material";
@@ -24,7 +24,7 @@ import {
 import Link from 'next/link';
 
 const sidebarItems = [
-  { label: 'Dashboard', icon: <Dashboard />, path: '/dashboard' },
+  { label: 'Dashboard', icon: <Dashboard />, path: '/Dashboard' },
   { label: 'Product', icon: <Inventory />, path: '/product' },
   { label: 'Adjustments', icon: <Settings />, path: '/adjustments' },
   { label: 'Transfer', icon: <SyncAlt />, path: '/transfer' },
@@ -52,8 +52,7 @@ const Sidebar = () => {
       <List>
         {sidebarItems.map((item) => (
           <Link key={item.label} href={item.path} passHref style={{ textDecoration: 'none', color: 'inherit' }}>
-            <ListItem
-              button
+            <ListItemButton
               sx={{
                 flexDirection: 'column',
                 textAlign: 'center',
@@ -65,7 +64,7 @@ const Sidebar = () => {
                 {item.icon}
               </ListItemIcon>
               <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: 12 }} />
-            </ListItem>
+            </ListItemButton>
           </Link>
         ))}
       </List>

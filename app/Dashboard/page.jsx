@@ -1,9 +1,12 @@
+"use client"
+
+
 import React from 'react'
-import sale from '../../components/Dashboard/firstBox.jsx';
+import Sale from '../../components/Dashboard/firstBox.jsx';
 export default function page() {
   return (
     <div>
-      { sale }
+      <Sale />
     </div>
   )
 }
