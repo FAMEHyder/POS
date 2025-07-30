@@ -1,9 +1,13 @@
 import Link from "next/link";
+import dashboard from './Dashboard/page.jsx';
+
+
+
 
 export default function Home() {
   return (
     <>
-    <>home</>
+    {dashboard}
     
     </>
   );
