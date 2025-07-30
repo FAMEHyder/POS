@@ -1,43 +1,89 @@
-
-'use client'
+'use client';
 
 import React from 'react';
-import { Box, Grid, Paper, Typography } from '@mui/material';
+import { Box, Paper, Typography } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ReplayIcon from '@mui/icons-material/Replay';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import UndoIcon from '@mui/icons-material/Undo';
 
 export default function FirstBox() {
-  const sections = [
-    { label: 'Sales', icon: <ShoppingCartIcon fontSize="large" color="primary" /> },
-    { label: 'Sales Return', icon: <ReplayIcon fontSize="large" color="secondary" /> },
-    { label: 'Purchase', icon: <LocalMallIcon fontSize="large" color="success" /> },
-    { label: 'Purchase Return', icon: <UndoIcon fontSize="large" color="error" /> },
-  ];
-
-  return (
-    <Box sx={{ flexGrow: 1, padding: 2 }}>
-      <Grid container spacing={2}>
-        {sections.map((section, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
-            <Paper
-              elevation={3}
-              sx={{
-                padding: 2,
+    return (
+        <Box
+            sx={{
                 display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: 1,
-                borderRadius: 3,
-              }}
-            >
-              {section.icon}
-              <Typography variant="h6">{section.label}</Typography>
-            </Paper>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-  );
+                flexWrap: 'wrap',
+                width: '80vw',         // ✅ Full viewport width
+                padding: 2,
+                gap: 2,
+                border: '2px solid green',
+            }}
+        >
+            {/* Left Column */}
+            <Box sx={{ width: { xs: '100%', md: '50%' }, display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Paper
+                    elevation={3}
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        padding: 2,
+                        gap: 2,
+                        borderRadius: 3,
+                    }}
+                >
+                    <ShoppingCartIcon fontSize="large" color="primary" />
+                    <Box>
+                        <Typography variant="h6">5000</Typography>
+                        <Typography variant="subtitle1">Sales</Typography>
+                    </Box>
+                </Paper>
+
+                <Paper
+                    elevation={3}
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        padding: 2,
+                        gap: 2,
+                        borderRadius: 3,
+                    }}
+                >
+                    <ReplayIcon fontSize="large" color="secondary" />
+                    <Typography variant="h6">Sales Return</Typography>
+                </Paper>
+            </Box>
+
+            {/* Right Column */}
+            <Box sx={{ width: { xs: '100%', md: '50%' }, display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Paper
+                    elevation={3}
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        padding: 2,
+                        gap: 2,
+                        borderRadius: 3,
+                    }}
+                >
+                    <LocalMallIcon fontSize="large" color="success" />
+                    <Typography variant="h6">Purchase</Typography>
+                </Paper>
+
+                <Paper
+                    elevation={3}
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        padding: 2,
+                        gap: 2,
+                        borderRadius: 3,
+                    }}
+                >
+                    <UndoIcon fontSize="large" color="error" />
+                    <Typography variant="h6">Purchase Return</Typography>
+                </Paper>
+            </Box>
+
+        </Box>
+    );
 }
