@@ -60,7 +60,7 @@ export default function DashboardPage() {
 
         {/* Right - Donut Chart */}
         <Grid item xs={12} md={6}>
-          <Paper elevation={3} sx={{ p: 2, textAlign: 'center' ,height:'92%'}}>
+          <Paper elevation={3} sx={{ p: 2, textAlign: 'center' ,height:'92%',width:'97%'}}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
               Top 05 Customer (January)
             </Typography>
