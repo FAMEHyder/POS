@@ -23,7 +23,7 @@ const COLORS = ['#7D3C98', '#D2B4DE', '#2E86C1', '#F4D03F', '#EC7063'];
 
 export default function DashboardPage() {
   return (
-    <Box sx={{ p: 4 }}>
+    <Box ml={2} mt={2}>
       <Grid container spacing={4}>
         {/* Left - Stock Alert */}
         <Grid item xs={12} md={6}>
@@ -60,7 +60,7 @@ export default function DashboardPage() {
 
         {/* Right - Donut Chart */}
         <Grid item xs={12} md={6}>
-          <Paper elevation={3} sx={{ p: 2, textAlign: 'center' }}>
+          <Paper elevation={3} sx={{ p: 2, textAlign: 'center' ,height:'92%'}}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
               Top 05 Customer (January)
             </Typography>
