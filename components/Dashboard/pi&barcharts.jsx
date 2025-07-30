@@ -28,11 +28,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 export default function ChartsPage() {
   return (
-    <Box sx={{ padding: 4 }}>
-      <Typography variant="h4" gutterBottom>
-        Dashboard Overview
-      </Typography>
-
+  
       <Grid container spacing={4}>
         {/* Pie Chart - Top Selling Products */}
         <Grid item xs={12} md={6}>
@@ -78,6 +74,5 @@ export default function ChartsPage() {
           </Paper>
         </Grid>
       </Grid>
-    </Box>
   );
 }
