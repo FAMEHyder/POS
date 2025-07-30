@@ -29,10 +29,11 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 export default function ChartsPage() {
   return (
   
-      <Grid container spacing={4}>
+      <Grid container spacing={4} ml={2}>
+
         {/* Pie Chart - Top Selling Products */}
-        <Grid item xs={12} md={6}>
-          <Paper sx={{ padding: 2 }}>
+        <Grid  width={'46%'}>
+          <Paper elevation={3} sx={{ padding: 2 }}>
             <Typography variant="h6" gutterBottom>
               Top Selling Products
             </Typography>
@@ -57,8 +58,8 @@ export default function ChartsPage() {
         </Grid>
 
         {/* Bar Chart - Weekly Sales vs Purchases */}
-        <Grid item xs={12} md={6}>
-          <Paper sx={{ padding: 2 }}>
+        <Grid >
+          <Paper elevation={3} sx={{ padding: 2 }}>
             <Typography variant="h6" gutterBottom>
               This Week's Sales vs Purchase
             </Typography>
