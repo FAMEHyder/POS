@@ -10,17 +10,16 @@ import UndoIcon from '@mui/icons-material/Undo';
 export default function FirstBox() {
     return (
         <Box
+        width={'97%'}
             sx={{
                 display: 'flex',
                 flexWrap: 'wrap',
-                width: '80vw',         // ✅ Full viewport width
                 padding: 2,
                 gap: 2,
-                border: '2px solid green',
             }}
         >
             {/* Left Column */}
-            <Box sx={{ width: { xs: '100%', md: '50%' }, display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <Box sx={{ width: '48%', display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <Paper
                     elevation={3}
                     sx={{
@@ -29,12 +28,13 @@ export default function FirstBox() {
                         padding: 2,
                         gap: 2,
                         borderRadius: 3,
+                        justifyContent: 'space-between'
                     }}
                 >
                     <ShoppingCartIcon fontSize="large" color="primary" />
                     <Box>
-                        <Typography variant="h6">5000</Typography>
-                        <Typography variant="subtitle1">Sales</Typography>
+                        <Typography variant="subtitle1" color='gray'>Sales</Typography>
+                        <Typography variant="h6" sx={{textAlign:'end'}}>5000</Typography>
                     </Box>
                 </Paper>
 
@@ -46,15 +46,19 @@ export default function FirstBox() {
                         padding: 2,
                         gap: 2,
                         borderRadius: 3,
+                        justifyContent: 'space-between'
+
                     }}
                 >
                     <ReplayIcon fontSize="large" color="secondary" />
-                    <Typography variant="h6">Sales Return</Typography>
-                </Paper>
+                    <Box>
+                        <Typography variant="subtitle1" color='gray'>Sales Return</Typography>
+                        <Typography variant="h6" sx={{textAlign:'end'}}>5000</Typography>
+                    </Box>                </Paper>
             </Box>
 
             {/* Right Column */}
-            <Box sx={{ width: { xs: '100%', md: '50%' }, display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <Box sx={{ width: '50%', display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <Paper
                     elevation={3}
                     sx={{
@@ -63,11 +67,15 @@ export default function FirstBox() {
                         padding: 2,
                         gap: 2,
                         borderRadius: 3,
+                        justifyContent: 'space-between'
+
                     }}
                 >
                     <LocalMallIcon fontSize="large" color="success" />
-                    <Typography variant="h6">Purchase</Typography>
-                </Paper>
+                    <Box >
+                        <Typography variant="subtitle1" color='gray'>Purchase</Typography>
+                        <Typography variant="h6" sx={{textAlign:'end'}}>5000</Typography>
+                    </Box>                </Paper>
 
                 <Paper
                     elevation={3}
@@ -77,11 +85,15 @@ export default function FirstBox() {
                         padding: 2,
                         gap: 2,
                         borderRadius: 3,
+                        justifyContent: 'space-between'
+
                     }}
                 >
                     <UndoIcon fontSize="large" color="error" />
-                    <Typography variant="h6">Purchase Return</Typography>
-                </Paper>
+                    <Box>
+                        <Typography variant="subtitle1" color='gray'>Purchase Return</Typography>
+                        <Typography variant="h6" sx={{textAlign:'end'}}>5000</Typography>
+                    </Box>                </Paper>
             </Box>
 
         </Box>
