@@ -55,7 +55,8 @@ export default function FirstBox() {
                     <Box>
                         <Typography variant="subtitle1" color='gray'>Sales Return</Typography>
                         <Typography variant="h6" sx={{ textAlign: 'end' }}>5000</Typography>
-                    </Box>                </Paper>
+                    </Box>
+                </Paper>
             </Box>
 
             {/* Right Column */}
@@ -76,7 +77,8 @@ export default function FirstBox() {
                     <Box >
                         <Typography variant="subtitle1" color='gray'>Purchase</Typography>
                         <Typography variant="h6" sx={{ textAlign: 'end' }}>5000</Typography>
-                    </Box>                </Paper>
+                    </Box>
+                </Paper>
 
                 <Paper
                     elevation={3}
@@ -94,7 +96,8 @@ export default function FirstBox() {
                     <Box>
                         <Typography variant="subtitle1" color='gray'>Purchase Return</Typography>
                         <Typography variant="h6" sx={{ textAlign: 'end' }}>5000</Typography>
-                    </Box>                </Paper>
+                    </Box>
+                </Paper>
             </Box>
 
         </Box>
