@@ -1,20 +1,27 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
+  Box,
   Table, TableBody, TableCell, TableContainer, TableHead,
-  TableRow, Paper, Typography, Chip
+  TableRow, Paper, Typography, Select, MenuItem
 } from '@mui/material';
 
-const invoices = [
-  { ref: 'INV001', customer: 'John Doe', amount: 200, status: 'Paid' },
-  { ref: 'INV002', customer: 'Jane Smith', amount: 450, status: 'Due' },
-  { ref: 'INV003', customer: 'Ahmed Khan', amount: 300, status: 'Paid' },
-  { ref: 'INV004', customer: 'Fatima Noor', amount: 150, status: 'Due' },
-  { ref: 'INV005', customer: 'Ali Rehman', amount: 600, status: 'Paid' },
-];
-
 const InvoiceTable = () => {
+  const [invoices, setInvoices] = useState([
+    { ref: 'INV001', customer: 'John Doe', amount: 200, status: 'Paid' },
+    { ref: 'INV002', customer: 'Jane Smith', amount: 450, status: 'Due' },
+    { ref: 'INV003', customer: 'Ahmed Khan', amount: 300, status: 'Paid' },
+    { ref: 'INV004', customer: 'Fatima Noor', amount: 150, status: 'Due' },
+    { ref: 'INV005', customer: 'Ali Rehman', amount: 600, status: 'Paid' },
+  ]);
+
+  const handleStatusChange = (event, index) => {
+    const updatedInvoices = [...invoices];
+    updatedInvoices[index].status = event.target.value;
+    setInvoices(updatedInvoices);
+  };
+
   return (
     <Box ml={2} mt={2} mb={2}>
       <Typography variant="h6" gutterBottom>
@@ -33,17 +40,21 @@ const InvoiceTable = () => {
           </TableHead>
 
           <TableBody>
-            {invoices.map((invoice) => (
+            {invoices.map((invoice, index) => (
               <TableRow key={invoice.ref}>
                 <TableCell>{invoice.ref}</TableCell>
                 <TableCell>{invoice.customer}</TableCell>
                 <TableCell>${invoice.amount}</TableCell>
                 <TableCell>
-                  <Chip
-                    label={invoice.status}
-                    color={invoice.status === 'Paid' ? 'success' : 'warning'}
+                  <Select
+                    value={invoice.status}
+                    onChange={(e) => handleStatusChange(e, index)}
                     size="small"
-                  />
+                    fullWidth
+                  >
+                    <MenuItem value="Paid">Paid</MenuItem>
+                    <MenuItem value="Due">Due</MenuItem>
+                  </Select>
                 </TableCell>
               </TableRow>
             ))}

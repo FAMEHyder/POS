@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import {
   Table, TableBody, TableCell, TableContainer, TableHead,
-  TableRow, Paper, Typography, Select, MenuItem
+  TableRow, Paper, Typography, Select, MenuItem,
+  Box
 } from '@mui/material';
 
 const initialData = [
@@ -47,7 +48,7 @@ const RecentSalesTable = () => {
 
 
   return (
-    <>
+    <Box ml={2} mt={2} mb={2}>
       <Typography variant="h6" gutterBottom>
         Recent Sales
       </Typography>
@@ -104,7 +105,7 @@ const RecentSalesTable = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </>
+    </Box>
   );
 };
 
