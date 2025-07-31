@@ -40,13 +40,15 @@ const sidebarItems = [
 
 const Sidebar = () => {
   return (
-    <Box
+    <>
+    <Box position={'fixed'}
       sx={{
         width: 150,
         bgcolor: '#f5f5f5',
         borderRight: '1px solid #ccc',
-        height: '180vh',
-        pt: 2,
+        height: '100vh',             // Use full viewport height
+        overflowY: 'auto', 
+        mb:2          // Enable vertical scroll
       }}
     >
       <List>
@@ -69,6 +71,7 @@ const Sidebar = () => {
         ))}
       </List>
     </Box>
+    </>
   );
 };
 

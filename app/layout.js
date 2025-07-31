@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 
 
           {/* The main component */}
-          <Box width={'100%'}>{children}</Box>
+          <Box width={'100%'} ml={20}>{children}</Box>
 
         </Box>
 

@@ -4,34 +4,29 @@ import { Grid, Box, Typography, List, ListItem, ListItemText } from "@mui/materi
 
 function Footer() {
   return (
-    <Box component="footer" bgcolor="#045956ff" py={5} px={3}>
-      <Grid container spacing={3} justifyContent="space-between">
+    <Box bgcolor="#045956ff" ml={20}>
+      <Grid spacing={2} justifyContent="space-between" display={'flex'}>
         {/* Column 1: About */}
-        <Grid item xs={12} md={4}>
+        <Grid width={'33%'} >
           <Typography variant="h6" gutterBottom>
             About Us
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" >
             We are a tech-driven company passionate about building AI-powered and scalable web apps that make your life easier.
           </Typography>
         </Grid>
 
         {/* Column 2: Quick Links */}
-        <Grid item xs={12} md={4}>
+        <Grid width={'33%'}>
           <Typography variant="h6" gutterBottom>
-            Quick Links
+            Address
           </Typography>
-          <List>
-            {["Home", "Services", "Contact", "Pricing"].map((text) => (
-              <ListItem key={text} disablePadding>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
+          <Typography variant="body2">Near HBL Branch alamdar chowk skardu </Typography>
         </Grid>
 
+
         {/* Column 3: Contact */}
-        <Grid item xs={12} md={4}>
+        <Grid width={'33%'}>
           <Typography variant="h6" gutterBottom>
             Contact Us
           </Typography>
@@ -39,6 +34,7 @@ function Footer() {
           <Typography variant="body2">Phone: +92 300 1234567</Typography>
           <Typography variant="body2">Location: Lahore, Pakistan</Typography>
         </Grid>
+
       </Grid>
     </Box>
   );
