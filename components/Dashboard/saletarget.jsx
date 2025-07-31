@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   RadialBarChart, RadialBar, Legend
@@ -30,10 +30,11 @@ const lineData = [
 
 export default function Dashboard() {
   return (
-    <Box sx={{ p: 4 }}>
-      <Grid container spacing={4}>
+    <Box ml={2} mt={2} mb={2}>
+      <Grid width={'99%'} display={'flex'} justifyContent={'space-between'}>
         {/* Sales Target - Radial Chart */}
-        <Grid item xs={12} md={6}>
+        <Grid width={'48%'}>
+            <Paper width={'100%'}>
           <Typography variant="h6" fontWeight="bold" mb={2}>Sales Target</Typography>
           <ResponsiveContainer width="100%" height={300}>
             <RadialBarChart
@@ -47,10 +48,12 @@ export default function Dashboard() {
               <Legend iconSize={10} layout="horizontal" verticalAlign="bottom" align="center" />
             </RadialBarChart>
           </ResponsiveContainer>
+          </Paper>
         </Grid>
 
         {/* Payment Chart - Line */}
-        <Grid item xs={12} md={6}>
+        <Grid width={'50%'}>
+            <Paper width={'50%'}>
           <Typography variant="h6" fontWeight="bold" mb={2}>
             Payment Sent & Received (Last 5 Days)
           </Typography>
@@ -64,6 +67,7 @@ export default function Dashboard() {
               <Line type="monotone" dataKey="received" stroke="#B0BEC5" strokeDasharray="5 5" />
             </LineChart>
           </ResponsiveContainer>
+          </Paper>
         </Grid>
       </Grid>
     </Box>

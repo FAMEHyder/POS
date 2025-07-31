@@ -34,7 +34,7 @@ export default function ChartsPage() {
         {/* Pie Chart - Top Selling Products */}
         <Grid  width={'46%'}>
           <Paper elevation={3} sx={{ padding: 2 }}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" fontWeight="bold" gutterBottom>
               Top Selling Products
             </Typography>
             <PieChart width={350} height={300}>
@@ -60,7 +60,7 @@ export default function ChartsPage() {
         {/* Bar Chart - Weekly Sales vs Purchases */}
         <Grid >
           <Paper elevation={3} sx={{ padding: 2 }}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h6" fontWeight="bold" gutterBottom>
               This Week's Sales vs Purchase
             </Typography>
             <BarChart width={500} height={300} data={barData}>
