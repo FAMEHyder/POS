@@ -6,7 +6,7 @@ import Pi from '../../components/Dashboard/pi&barcharts.jsx';
 import Stock from '../../components/Dashboard/stock.jsx';
 import SalesTarget from '../../components/Dashboard/saletarget.jsx';
 import Invoice from '../../components/Dashboard/invoice.jsx';
-
+import Recent from '../../components/Dashboard/recentsales.jsx';
 
 export default function page() {
   return (
@@ -16,6 +16,7 @@ export default function page() {
       <Stock />
       <SalesTarget />
       <Invoice />
+      <Recent />
     </div>
   )
 }

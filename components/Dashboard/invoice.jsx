@@ -16,7 +16,7 @@ const invoices = [
 
 const InvoiceTable = () => {
   return (
-    <>
+    <Box ml={2} mt={2} mb={2}>
       <Typography variant="h6" gutterBottom>
         Invoice Table
       </Typography>
@@ -50,7 +50,7 @@ const InvoiceTable = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </>
+    </Box>
   );
 };
 
