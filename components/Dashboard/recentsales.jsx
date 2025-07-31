@@ -41,15 +41,20 @@ const RecentSalesTable = () => {
   const [salesData, setSalesData] = useState(initialData);
 
   const handleChange = (index, field, value) => {
-  const updated = [...salesData];
-  updated[index][field] = value;
-  setSalesData(updated);
-};
+    const updated = [...salesData];
+    updated[index][field] = value;
+    setSalesData(updated);
+  };
 
+  const getColorStyle = (value) => ({
+    color: value === 'Paid' ? 'green' : 'red',
+    fontWeight: 'bold',
+    borderColor: value === 'Paid' ? 'green' : 'red',
+  });
 
   return (
     <Box ml={2} mt={2} mb={2}>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" fontWeight="bold" gutterBottom>
         Recent Sales
       </Typography>
 
@@ -73,12 +78,13 @@ const RecentSalesTable = () => {
                 <TableCell>{row.ref}</TableCell>
                 <TableCell>{row.customer}</TableCell>
 
-                {/* Status (selectable) */}
+                {/* Status with color */}
                 <TableCell>
                   <Select
                     value={row.status}
                     onChange={(e) => handleChange(index, 'status', e.target.value)}
                     size="small"
+                    sx={getColorStyle(row.status)}
                   >
                     <MenuItem value="Paid">Paid</MenuItem>
                     <MenuItem value="Due">Due</MenuItem>
@@ -89,12 +95,13 @@ const RecentSalesTable = () => {
                 <TableCell>${row.paid}</TableCell>
                 <TableCell>${row.due}</TableCell>
 
-                {/* Payment Status (selectable) */}
+                {/* Payment Status with color */}
                 <TableCell>
                   <Select
                     value={row.paymentStatus}
                     onChange={(e) => handleChange(index, 'paymentStatus', e.target.value)}
                     size="small"
+                    sx={getColorStyle(row.paymentStatus)}
                   >
                     <MenuItem value="Paid">Paid</MenuItem>
                     <MenuItem value="Due">Due</MenuItem>

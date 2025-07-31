@@ -22,9 +22,17 @@ const InvoiceTable = () => {
     setInvoices(updatedInvoices);
   };
 
+  const getColorStyles = (status) => {
+    return {
+      color: status === 'Paid' ? 'green' : 'red',
+      fontWeight: 'bold',
+      borderColor: status === 'Paid' ? 'green' : 'red',
+    };
+  };
+
   return (
     <Box ml={2} mt={2} mb={2}>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" fontWeight="bold" gutterBottom>
         Invoice Table
       </Typography>
 
@@ -51,6 +59,7 @@ const InvoiceTable = () => {
                     onChange={(e) => handleStatusChange(e, index)}
                     size="small"
                     fullWidth
+                    sx={getColorStyles(invoice.status)}
                   >
                     <MenuItem value="Paid">Paid</MenuItem>
                     <MenuItem value="Due">Due</MenuItem>
